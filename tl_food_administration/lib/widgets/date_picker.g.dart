@@ -7,8 +7,10 @@ part of 'date_picker.dart';
 // **************************************************************************
 
 class DatePicker extends HookWidget {
-  const DatePicker({Key? key}) : super(key: key);
+  const DatePicker({Key? key, required this.menus}) : super(key: key);
+
+  final List<MenuDto> menus;
 
   @override
-  Widget build(BuildContext _context) => _datePicker();
+  Widget build(BuildContext _context) => _datePicker(menus: menus);
 }

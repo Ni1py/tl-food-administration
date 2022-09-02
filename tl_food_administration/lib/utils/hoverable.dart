@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:functional_widget_annotation/functional_widget_annotation.dart';
 
-part 'hovered_widget.g.dart';
+part 'hoverable.g.dart';
 
 @hwidget
-Widget _hoveredWidget({required Widget Function(bool isHovered) child}) {
+Widget _hoverable({required Widget Function(bool isHovered) child}) {
   final isHover = useState(false);
 
   void _onEntered(bool isHovered) {

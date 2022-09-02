@@ -1,14 +1,14 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'add_button.dart';
+part of 'helper.dart';
 
 // **************************************************************************
 // FunctionalWidgetGenerator
 // **************************************************************************
 
-class AddButton extends StatelessWidget {
-  const AddButton({Key? key}) : super(key: key);
+class Helper extends HookWidget {
+  const Helper({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext _context) => _addButton();
+  Widget build(BuildContext _context) => _helper();
 }

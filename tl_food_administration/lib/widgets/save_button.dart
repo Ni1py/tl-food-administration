@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:functional_widget_annotation/functional_widget_annotation.dart';
-import 'package:tl_food_administration/widgets/hovered_widget.dart';
+import 'package:tl_food_administration/utils/hoverable.dart';
 
 part 'save_button.g.dart';
 
 @swidget
 Widget _saveButton() {
-  return HoveredWidget(child: (isHovered) {
+  return Hoverable(child: (isHovered) {
     return DecoratedBox(
         decoration: BoxDecoration(
             color: isHovered ? Colors.blueGrey[200] : Colors.blueGrey[100],

@@ -6,7 +6,7 @@ part of 'menu_creation_page.dart';
 // FunctionalWidgetGenerator
 // **************************************************************************
 
-class MenuCreationPage extends StatelessWidget {
+class MenuCreationPage extends HookWidget {
   const MenuCreationPage(this.dishes, {Key? key}) : super(key: key);
 
   final List<DishDto> dishes;
@@ -15,9 +15,15 @@ class MenuCreationPage extends StatelessWidget {
   Widget build(BuildContext _context) => _menuCreationPage(dishes);
 }
 
-class _VendorRow extends HookWidget {
-  const _VendorRow({Key? key}) : super(key: key);
+class _VendorRow extends StatelessWidget {
+  const _VendorRow({Key? key, required this.dishes, required this.vendor})
+      : super(key: key);
+
+  final List<DishDto> dishes;
+
+  final ValueNotifier<String?> vendor;
 
   @override
-  Widget build(BuildContext _context) => __vendorRow();
+  Widget build(BuildContext _context) =>
+      __vendorRow(dishes: dishes, vendor: vendor);
 }
