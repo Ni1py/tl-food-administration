@@ -3,14 +3,13 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:functional_widget_annotation/functional_widget_annotation.dart';
 import 'package:gap/gap.dart';
 import 'package:tl_food_administration/data/dto/dish_dto.dart';
+import 'package:tl_food_administration/utils/styles/border_table.dart';
 import 'package:tl_food_administration/widgets/delete_button.dart';
 import 'package:tl_food_administration/widgets/multi_chip.dart';
 import 'package:tl_food_administration/widgets/multi_select.dart';
 import 'package:tl_food_administration/widgets/save_button.dart';
 
 part 'menu_table.g.dart';
-
-final _border = Border.all(color: const Color(0xffdcdddc), width: 1);
 
 @hwidget
 Widget _menuTable({required List<DishDto> dishes, required String vendor}) {
@@ -70,7 +69,7 @@ Widget __tableRow(
     required void Function(List<dynamic>) onConfirm,
     required String titleText}) {
   return DecoratedBox(
-    decoration: BoxDecoration(border: _border),
+    decoration: BoxDecoration(border: borderTable),
     child: IntrinsicHeight(
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
